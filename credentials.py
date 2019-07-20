@@ -1,7 +1,8 @@
-class Credentials():
+class Credentials:
     """
     Class that generates new instances of passwords
     """
+
     credentials_list = []
 
     def __init__(self, website, user_name, password):
@@ -15,13 +16,11 @@ class Credentials():
         self.website = website
         self.user_name = user_name
         self.password = password
-        pass
-
-    pass
 
 
-class User():
+class User:
     """
     Class that generates new instances of a user
     """
+
     pass
