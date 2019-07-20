@@ -2,7 +2,9 @@ class Credentials():
     """
     Class that generates new instances of passwords
     """
-    def __init__():
+    credentials_list = []
+
+    def __init__(self, website, user_name, password):
         """
         __init__ method that helps us define properties for our objects.
         Args:
@@ -10,6 +12,9 @@ class Credentials():
         user_name: username of the account
         password: password of the account
         """
+        self.website = website
+        self.user_name = user_name
+        self.password = password
         pass
 
     pass
