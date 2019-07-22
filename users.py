@@ -3,7 +3,7 @@ class User:
     Class that generates new instances of a user
     """
 
-    users_list = []
+    user_list = []
 
     def __init__(self, name, user_email, user_password):
         """
@@ -21,4 +21,11 @@ class User:
         """
         save_user method saves users objects into users_list
         """
-        User.users_list.append(self)
+        User.user_list.append(self)
+
+    def delete_user(self):
+        """
+        delete_user method deletes a saved user from the user list
+        :return:
+        """
+        User.user_list.remove(self)
