@@ -37,6 +37,15 @@ class TestUser(unittest.TestCase):
         self.new_user.delete_user()  # deleting a user object
         self.assertEqual(len(User.user_list), 1)
 
+    def test_save_multiple_users(self):
+        """
+        test to check if we can save multiple objects in the users list
+        """
+        self.new_user.save_user()
+        test_user = User("Aviana", "aviavi", "avi123")
+        test_user.save_user()
+        self.assertEqual(len(User.user_list), 2)
+
     def tearDown(self):
         """
         method to clear instances created during testing when each test runs
