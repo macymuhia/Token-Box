@@ -9,7 +9,7 @@ class TestCredentials(unittest.TestCase):
         Set up method to run before each test cases.
         """
         self.new_credentials = Credentials("blink.com", "macy",
-                                           "pass123")  # create contact object
+                                           "pass123")  # create credentials object
 
     def test_init(self):
         """
