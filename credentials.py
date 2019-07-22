@@ -5,7 +5,6 @@ class Credentials:
     """
     Class that generates new instances of passwords
     """
-
     credentials_list = []
 
     def __init__(self, website, user_name, password):
@@ -72,18 +71,3 @@ class Credentials:
     def copy_password(cls, website_url):
         credentials_found = Credentials.find_by_website(website_url)
         pyperclip.copy(credentials_found.password)
-
-
-# cred1 = Credentials("google1.com", "macy1", "macy123")
-# cred2 = Credentials("google2.com", "macy2", "macy223")
-# cred3 = Credentials("google3.com", "macy3", "macy323")
-# cred4 = Credentials("google4.com", "macy4", "macy423")
-# cred5 = Credentials("google5.com", "macy5", "macy523")
-
-
-class User:
-    """
-    Class that generates new instances of a user
-    """
-
-    pass

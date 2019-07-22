@@ -44,7 +44,8 @@ class TestCredentials(unittest.TestCase):
         test_credentials = Credentials("example.com", "example", "example123")
         test_credentials.save_credentials()
 
-        self.new_credentials.delete_credentials() # deleting a credentials object
+        self.new_credentials.delete_credentials(
+        )  # deleting a credentials object
         self.assertEqual(len(Credentials.credentials_list), 1)
 
     def test_find_credentials_by_website(self):
@@ -56,7 +57,8 @@ class TestCredentials(unittest.TestCase):
         test_credentials.save_credentials()
 
         found_credentials = Credentials.find_by_website("example.com")
-        self.assertEqual(found_credentials.user_name, test_credentials.user_name)
+        self.assertEqual(found_credentials.user_name,
+                         test_credentials.user_name)
 
     def test_credentials_exist(self):
         """
@@ -74,14 +76,15 @@ class TestCredentials(unittest.TestCase):
         """
         method that returns a list of all credentials saved
         """
-        self.assertEqual(Credentials.display_credentials(), Credentials.credentials_list)
+        self.assertEqual(Credentials.display_credentials(),
+                         Credentials.credentials_list)
 
     def test_copy_password(self):
         """
         Test to confirm that we're copying the password from found credential
         """
         self.new_credentials.save_credentials()
-        Credentials.copy_password("example.com")
+        Credentials.copy_password("blink.com")
 
         self.assertEqual(self.new_credentials.password, pyperclip.paste())
 
