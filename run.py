@@ -175,7 +175,7 @@ def main():
                       "🔹 v -> view saved tokens\n"
                       "🔹 f -> find a token\n"
                       "🔹 d -> delete a saved token\n"
-                      "🔹 x -> exit Token Box")
+                      "🔹 x -> exit Token Box Account")
                 print(" *" * 15)
                 print(" What would you like to do?")
                 short_code = input().lower().strip()
