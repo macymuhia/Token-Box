@@ -31,28 +31,28 @@ class User:
         User.user_list.remove(self)
 
     @classmethod
-    def find_by_email(cls, u_name):
+    def find_by_email(cls, e_name):
         """
         method that takes in a email and returns user that matches that email
         Args:
-            u_name: user email to search for
+            e_name: user email to search for
         Returns:
             user that matches the email
         """
 
         for user in cls.user_list:
-            if user.user_email == u_name:
+            if user.user_email == e_name:
                 return user
 
     @classmethod
-    def exists(cls, u_name):
+    def exists(cls, e_name):
         """
         Method checks if a user exists from the users list
-        :param u_name: u_name to search if user exists
+        :param e_name: u_name to search if user exists
         :return: Boolean: True or False depending on whether the user exists
         """
         for user in cls.user_list:
-            if user.user_email == u_name:
+            if user.user_email == e_name:
                 return True
         return False
 
