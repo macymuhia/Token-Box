@@ -1,8 +1,6 @@
 # TOKEN BOX
 ## Description
-```
 Token Box is an application that enables a user to store their tokens (name, email and password) in the application. As it has no user interface, interaction with the application is through the terminal.
-```
 ## Token Box Screenshot
 ![Token Box Screenshot](images/screenshot.png)
 
